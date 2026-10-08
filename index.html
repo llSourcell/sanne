@@ -2,7 +2,7 @@
 <style>body{font-family:Georgia,serif;background:#f1ede3;color:#1f2a22;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}form{text-align:center}input{font-size:28px;padding:10px 14px;width:9em;text-align:center;border-radius:12px;border:1px solid #9a9}button{font-size:20px;padding:12px 26px;border-radius:999px;border:0;background:#3f6b4a;color:#fff;margin-top:14px}p{opacity:.7}</style></head>
 <body><form id="f"><h1>Sanne</h1><p>Type the word and sit down at the table.</p><input id="pin" autocomplete="off" autocapitalize="none" autofocus><br><button>Go</button><p id="msg"></p></form>
 <script>
-let ct=Uint8Array.from(atob("elQoOiTpTa+74ZIwDYA5j6+qasjadXvEe8E4DwPW1BmAY5WDNIiO3Vqh1kD6hQRk6trlBrQRg+fQR7r3Zdr74gEF0A=="),c=>c.charCodeAt(0));const repo="llSourcell/sanne";const check="81762583f6c305c8";const updated="2026-10-08 11:18";
+let ct=Uint8Array.from(atob("elQoOiTpTa+74ZIwDYA5j6+qasjadXvEe8E4DwPW1BmAY5WDNIiO3Vqh1kD6hQRk6trlBrQRg+fQR7r3Zdr74gEF0A=="),c=>c.charCodeAt(0));const repo="llSourcell/sanne";const check="81762583f6c305c8";const updated="2026-10-08 11:42";
 async function sha(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return new Uint8Array(b);}
 function hex(u){return [...u].map(x=>x.toString(16).padStart(2,'0')).join('');}
 async function go(pin){if(hex(await sha(pin+'|check')).slice(0,16)!==check){document.getElementById('msg').textContent='That is not the word.';return;}
